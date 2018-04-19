@@ -22,21 +22,21 @@ Argument           | Required | Description
 
 ## Example
 
-Replace messages with keys .*(-bns-pro) .*(-bns-epic) from topic achievements-statejournal to topic bns-statejournal
+Replace messages with keys .*(-first-key) .*(-second-key) from topic first-statejournal to topic second-statejournal
 ```
-go run -in=achievements-statejournal -out=bns-statejournal -brokers=kafka1:9092 kafka2:9092 kafka3:9092 -expected=.*(-bns-pro) .*(-bns-epic)
+go run -in=first-statejournal -out=second-statejournal -brokers=kafka1:9092 kafka2:9092 kafka3:9092 -expected=.*(-first-key) .*(-second-key)
 
 ```
 
-Delete messages with keys .*(-bns-pro) .*(-bns-epic) from topic achievements-statejournal
+Delete messages with keys .*(-first-key) .*(-second-key) from topic first-statejournal
 ```
-go run -in=achievements-statejournal -brokers=kafka1:9092 kafka2:9092 kafka3:9092 -expected=.*(-bns-pro) .*(-bns-epic) -delete
+go run -in=first-statejournal -brokers=kafka1:9092 kafka2:9092 kafka3:9092 -expected=.*(-first-key) .*(-second-key) -delete
 
 ```
 
-Print in logs consumed messages with keys .*(-bns-pro) .*(-bns-epic) from topic achievements-statejournal
+Print in logs consumed messages with keys .*(-first-key) .*(-second-key) from topic first-statejournal
 ```
-go run -in=achievements-statejournal -brokers=kafka1:9092 kafka2:9092 kafka3:9092 -expected=.*(-bns-pro) .*(-bns-epic) -test
+go run -in=first-statejournal -brokers=kafka1:9092 kafka2:9092 kafka3:9092 -expected=.*(-first-key) .*(-second-key) -test
 
 ```
 
