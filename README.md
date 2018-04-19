@@ -1,7 +1,5 @@
 # utils.kafka
 
-https://wiki.inn.ru/pages/viewpage.action?pageId=54267625
-
 State importer Tool
 =====================
 
